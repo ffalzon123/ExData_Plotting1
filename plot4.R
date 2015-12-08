@@ -46,7 +46,7 @@ lines(filteredData$DateTime, filteredData$Voltage, type = "l")
 
 #plot d
 plot(filteredData$DateTime, filteredData$Global_reactive_power, type = "n", 
-     xlab = "datetime", ylab = "Global_reactive_powerylabylab")
+     xlab = "datetime", ylab = "Global_reactive_power")
 lines(filteredData$DateTime, filteredData$Global_reactive_power, type = "l")
 
 
