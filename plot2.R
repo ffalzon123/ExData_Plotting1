@@ -23,9 +23,11 @@ filteredData$Sub_metering_1 <- as.numeric(filteredData$Sub_metering_1)
 filteredData$Sub_metering_2 <- as.numeric(filteredData$Sub_metering_2)
 filteredData$Sub_metering_3 <- as.numeric(filteredData$Sub_metering_3)
 
+#create the plot
 par(cex = .75)
-hist(filteredData$Global_active_power, col = "red", xlab = "Global Active Power (kilowatts)", 
-     main = "Global Active Power")
+plot(filteredData$DateTime, filteredData$Global_active_power, type = "n", 
+     xlab = "", ylab = "Global Active Power (kilowatts)")
+lines(filteredData$DateTime, filteredData$Global_active_power, type = "l")
 
-dev.copy(png, file = "plot1.png")
+dev.copy(png, file = "plot2.png")
 dev.off()
